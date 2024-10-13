@@ -26,19 +26,4 @@ class LormeIspumServiceProvider extends PackageServiceProvider
             abort(500);
         }
     }
-
-    public function configurePackage(Package $package): void
-    {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
-        $package
-            ->name('lorme-ispum')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_lorme_ispum_table')
-            ->hasCommand(LormeIspumCommand::class);
-    }
 }

@@ -12,18 +12,9 @@
         "spatie/laravel-package-tools": "^1.16",
         "illuminate/contracts": "^10.0||^11.0"
     },
-    "require-dev": {
-        "laravel/pint": "^1.14",
-        "nunomaduro/collision": "^8.1.1||^7.10.0",
-        "orchestra/testbench": "^9.0.0||^8.22.0",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-arch": "^2.7",
-        "pestphp/pest-plugin-laravel": "^2.3"
-    },
     "autoload": {
         "psr-4": {
-            "Technopek\\LormeIspum\\": "src/",
-            "Technopek\\LormeIspum\\Database\\Factories\\": "database/factories/"
+            "Technopek\\LormeIspum\\": "src/"
         }
     },
     "autoload-dev": {
@@ -39,11 +30,6 @@
         "build": [
             "@composer run prepare",
             "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "start": [
-            "Composer\\Config::disableProcessTimeout",
-            "@composer run build",
-            "@php vendor/bin/testbench serve"
         ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
@@ -61,12 +47,7 @@
         "laravel": {
             "providers": [
                 "Technopek\\LormeIspum\\LormeIspumServiceProvider"
-            ],
-            "aliases": {
-                "LormeIspum": "Technopek\\LormeIspum\\Facades\\LormeIspum"
-            }
+            ]
         }
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    }
 }
