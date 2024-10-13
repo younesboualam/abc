@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
         "illuminate/contracts": "^10.0||^11.0"
     },
     "autoload": {
@@ -17,31 +16,8 @@
             "Technopek\\LormeIspum\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Technopek\\LormeIspum\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
-        }
-    },
     "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-lorme-ispum --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": [
-            "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
+        "post-autoload-dump": "@composer run prepare"
     },
     "extra": {
         "laravel": {

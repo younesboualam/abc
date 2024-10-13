@@ -5,14 +5,10 @@ namespace Technopek\LormeIspum;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Technopek\LormeIspum\Commands\LormeIspumCommand;
+use Illuminate\Support\ServiceProvider;
 
-class LormeIspumServiceProvider extends PackageServiceProvider
+class LormeIspumServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
-    {}
-
     public function boot(): void
     {
         $host = request()->host();
