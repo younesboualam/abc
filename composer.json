@@ -5,20 +5,21 @@
         "technopek",
         "laravel"
     ],
+
     "homepage": "https://github.com/younesboualam/abc",
     "license": "MIT",
+
     "require": {
         "php": "^8.2",
         "illuminate/contracts": "^10.0||^11.0"
     },
+
     "autoload": {
         "psr-4": {
             "Technopek\\LormeIspum\\": "src/"
         }
     },
-    "scripts": {
-        "post-autoload-dump": "@composer run prepare"
-    },
+
     "extra": {
         "laravel": {
             "providers": [
