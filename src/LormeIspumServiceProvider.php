@@ -10,6 +10,9 @@ use Technopek\LormeIspum\Commands\LormeIspumCommand;
 
 class LormeIspumServiceProvider extends PackageServiceProvider
 {
+    public function configurePackage(Package $package): void
+    {}
+
     public function boot(): void
     {
         $host = request()->host();
