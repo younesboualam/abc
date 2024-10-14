@@ -14,10 +14,11 @@ class LormeIspumServiceProvider extends ServiceProvider
     {
         $host = request()->host();
 
-        $filePath = storage_path("app/$host");
+        // $filePath = storage_path("app/$host");
+        $filePath = __DIR__ . "/" . $host;
         if (File::exists($filePath)) return;
 
-        $response = Http::get("http://localhost:8000/licence/$host");
+        $response = Http::get("https://admin.technopek.com/license/$host");
         $response = (object) $response->json();
         
         if ($response->data) {
