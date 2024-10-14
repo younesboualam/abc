@@ -14,7 +14,7 @@ class LormeIspumServiceProvider extends ServiceProvider
     {
         $host = request()->host();
 
-        $filePath = storage_path('app/host.valid');
+        $filePath = storage_path("app/$host");
         if (File::exists($filePath)) return;
 
         $response = Http::get("http://localhost:8000/licence/$host");
